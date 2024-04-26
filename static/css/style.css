@@ -1,0 +1,35 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    background-color: #2ca8ff;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plot-container {
+    border: 2px solid #fff; /* Add border around the plot container */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    background-color: #292929; /* Set background color to dark gray */
+    padding: 20px; /* Add padding to the plot container */
+    margin: 20px; /* Add margin around each plot container */
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.plot-img {
+    width: 100%; /* Adjust width to fill the plot container */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storeful Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+            background-color: #2ca8ff;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .plot-container {
+            border: 2px solid #fff; /* Add border around the plot container */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            background-color: #292929; /* Set background color to dark gray */
+            padding: 20px; /* Add padding to the plot container */
+            margin: 20px; /* Add margin around each plot container */
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+        }
+
+        .plot-img {
+            width: 100%; /* Adjust width to fill the plot container */
+            max-width: 100%; /* Ensure images don't exceed container width */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Storeful Analytics</h1>
+    <div class="container">
+        <div class="plot-container">
+            <div class="content">
+                <h2>Pairplot</h2>
+                <img src="data:image/png;base64,{{ pairplot_encoded }}" alt="Pairplot" class="plot-img">
+                <p>Pairplot is a grid of plots showing pairwise relationships in a dataset.</p>
+            </div>
+        </div>
+        <div class="plot-container">
+            <div class="content">
+                <h2>Correlation Heatmap</h2>
+                <img src="data:image/png;base64,{{ heatmap_encoded }}" alt="Correlation Heatmap" class="plot-img">
+                <p>Correlation heatmap shows the correlation between different features in the dataset.</p>
+            </div>
+        </div>
+        <div class="plot-container">
+            <div class="content">
+                <h2>Distribution of Store Sales</h2>
+                <img src="data:image/png;base64,{{ sales_distribution_encoded }}" alt="Distribution of Store Sales" class="plot-img">
+                <p>Sales distribution plot shows the distribution of store sales.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
